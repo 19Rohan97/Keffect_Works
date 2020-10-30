@@ -1,3 +1,5 @@
+<?php include 'sendemail.php';?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,6 +11,15 @@
     <meta name="author" content="Keffect Digital" />
     <!-- description -->
     <meta name="description" content="Adyaconnect Pvt Ltd" />
+
+    <!-- keywords -->
+    <meta
+      name="keywords"
+      content="Adya, Adyaconnect, sms, sms marketing, bulk sms, free sms, receive sms online, text messages, send a text, sms online"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" sizes="32x32" />
 
     <!-- Google Fonts -->
     <link
@@ -43,6 +54,36 @@
 
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css" />
+
+    <style>
+      /*css for alert messages*/
+
+      .alert-success {
+        z-index: 1;
+        background: #d4edda;
+        font-size: 18px;
+        padding: 20px 40px;
+        min-width: 420px;
+        position: fixed;
+        right: 0;
+        top: 10px;
+        border-left: 8px solid #3ad66e;
+        border-radius: 4px;
+      }
+
+      .alert-error {
+        z-index: 1;
+        background: #fff3cd;
+        font-size: 18px;
+        padding: 20px 40px;
+        min-width: 420px;
+        position: fixed;
+        right: 0;
+        top: 10px;
+        border-left: 8px solid #ffa502;
+        border-radius: 4px;
+      }
+    </style>
   </head>
   <body>
     <div id="wrapper">
@@ -52,29 +93,28 @@
           <span></span>
           <span></span>
         </div>
-        <h3>aadyaconnect</h3>
+        <h3>adyaconnect</h3>
       </div>
       <!--HEADER START-->
       <header id="header">
         <div class="container-fluid">
           <div class="navbar">
-            <a href="#" id="logo" title="Octagon">
-              <img src="images/logo.png" alt="Octagon" />
+            <a href="index.html" id="logo" title="Adyaconnect">
+              <img src="images/Full logo-white.png" alt="Adyaconnect" />
             </a>
             <div class="navigation-row">
               <nav id="navigation">
-                <button type="button" class="navbar-toggle">
+                <!-- <button type="button" class="navbar-toggle">
                   <i class="fa fa-bars"></i>
-                </button>
+                </button> -->
                 <div class="nav-box navbar-collapse">
                   <ul class="navigation-menu nav navbar-nav navbars" id="nav">
                     <li><a href="#1">Home</a></li>
                     <li><a href="#2">About</a></li>
-                    <li><a href="#3">Skills</a></li>
-                    <li><a href="#4">Services</a></li>
-                    <li><a href="#5">Testimonials</a></li>
-                    <li><a href="#6">Work</a></li>
-                    <li><a href="#7">Contact</a></li>
+                    <li><a href="#3">Services</a></li>
+                    <li><a href="#4">Testimonials</a></li>
+                    <li><a href="#5">Work</a></li>
+                    <li><a href="#6">Contact</a></li>
                   </ul>
                   <!--/.navigation-menu-->
                 </div>
@@ -122,15 +162,13 @@
           <div class="section-inner">
             <div class="welcome-box">
               <h1 class="welcome-title animate" data-animate="fadeInUp">
-                <span>Welcome to</span> Aadya<small>connect</small>
+                <!-- <img src="images/Logo Text.png" alt="" /> -->
+                <span>Welcome to</span> Adya<small>connect</small>
               </h1>
               <p class="animate" data-animate="fadeInUp">
                 Connect with customers everywhere who wants want to interact
                 with you within a single powerful platform.
               </p>
-              <span class="btn next-section animate" data-animate="fadeInUp"
-                >Read More</span
-              >
             </div>
             <!--/.welcome-box-->
           </div>
@@ -145,7 +183,7 @@
                   <div class="row">
                     <div class="col-md-6">
                       <figure class="about-img animate" data-animate="fadeInUp">
-                        <img src="images/about-img.jpg" alt="" />
+                        <img src="images/about-us-v2.jpg" alt="" />
                       </figure>
                     </div>
                     <div class="col-md-6">
@@ -153,7 +191,10 @@
                         <div class="animate" data-animate="fadeInUp">
                           <h2>About us</h2>
                           <p>
-                            Strengthen your customer relationships by uniting communications across your entire business, from marketing and sales to customer service and operations.
+                            Strengthen your customer relationships by uniting
+                            communications across your entire business, from
+                            marketing and sales to customer service and
+                            operations.
                           </p>
                         </div>
                         <div class="facts-row animate" data-animate="fadeInUp">
@@ -211,111 +252,8 @@
           <!--/.section-inner-->
         </div>
         <!--/.section-->
+
         <div class="section animated-row" id="3">
-          <div class="section-inner">
-            <div class="row justify-content-center">
-              <div class="col-md-7 wide-col-laptop">
-                <div class="title-block animate" data-animate="fadeInUp">
-                  <h2>Our Skills</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                </div>
-                <div class="skills-row">
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <div class="skill-bar">
-                        <strong class="skill-label">HTML</strong>
-                        <div class="progress-bar-value">
-                          <span class="progress-value" style="width: 80%"
-                            ><em>80%</em></span
-                          >
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="skill-bar">
-                        <strong class="skill-label">CSS</strong>
-                        <div class="progress-bar-value">
-                          <span class="progress-value" style="width: 60%"
-                            ><em>60%</em></span
-                          >
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="skill-bar">
-                        <strong class="skill-label">WEB DEVELOPMENT</strong>
-                        <div class="progress-bar-value">
-                          <span class="progress-value" style="width: 55%"
-                            ><em>55%</em></span
-                          >
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="skill-bar">
-                        <strong class="skill-label">DESIGN</strong>
-                        <div class="progress-bar-value">
-                          <span class="progress-value" style="width: 95%"
-                            ><em>95%</em></span
-                          >
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="skill-bar">
-                        <strong class="skill-label">Wordpress</strong>
-                        <div class="progress-bar-value">
-                          <span class="progress-value" style="width: 70%"
-                            ><em>70%</em></span
-                          >
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="skill-bar">
-                        <strong class="skill-label">Laravel</strong>
-                        <div class="progress-bar-value">
-                          <span class="progress-value" style="width: 83%"
-                            ><em>83%</em></span
-                          >
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="skill-bar">
-                        <strong class="skill-label">Magento</strong>
-                        <div class="progress-bar-value">
-                          <span class="progress-value" style="width: 50%"
-                            ><em>50%</em></span
-                          >
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="skill-bar">
-                        <strong class="skill-label">PHP</strong>
-                        <div class="progress-bar-value">
-                          <span class="progress-value" style="width: 75%"
-                            ><em>75%</em></span
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!--/.row-->
-                </div>
-                <!--/.skills-row-->
-              </div>
-            </div>
-          </div>
-          <!--/.section-inner-->
-        </div>
-        <!--/.section-->
-        <div class="section animated-row" id="4">
           <div class="section-inner">
             <div class="row justify-content-center">
               <div class="col-md-8 wide-col-laptop">
@@ -333,9 +271,9 @@
                     <div class="item animate" data-animate="fadeInUp">
                       <div class="service-box">
                         <span class="service-icon"
-                          ><i class="fa fa-television" aria-hidden="true"></i
+                          ><i class="fa fa-envelope" aria-hidden="true"></i
                         ></span>
-                        <h3>Web Development</h3>
+                        <h3>SMS Marketing</h3>
                         <p>
                           Lorem ipsum dolor sit amet, consectetur adipiscing
                           elit, sed do eiusmod tempor incididunt ut labore et
@@ -348,9 +286,9 @@
                     <div class="item animate" data-animate="fadeInUp">
                       <div class="service-box">
                         <span class="service-icon"
-                          ><i class="fa fa-paint-brush" aria-hidden="true"></i
+                          ><i class="fa fa-envelope" aria-hidden="true"></i
                         ></span>
-                        <h3>Web Design</h3>
+                        <h3>SMS Marketing</h3>
                         <p>
                           Lorem ipsum dolor sit amet, consectetur adipiscing
                           elit, sed do eiusmod tempor incididunt ut labore et
@@ -362,9 +300,9 @@
                     <div class="item animate" data-animate="fadeInUp">
                       <div class="service-box">
                         <span class="service-icon"
-                          ><i class="fa fa-gift" aria-hidden="true"></i
+                          ><i class="fa fa-envelope" aria-hidden="true"></i
                         ></span>
-                        <h3>Brand Identity</h3>
+                        <h3>SMS Marketing</h3>
                         <p>
                           Lorem ipsum dolor sit amet, consectetur adipiscing
                           elit, sed do eiusmod tempor incididunt ut labore et
@@ -377,9 +315,9 @@
                     <div class="item animate" data-animate="fadeInUp">
                       <div class="service-box">
                         <span class="service-icon"
-                          ><i class="fa fa-bullseye" aria-hidden="true"></i
+                          ><i class="fa fa-envelope" aria-hidden="true"></i
                         ></span>
-                        <h3>SEO</h3>
+                        <h3>SMS Marketing</h3>
                         <p>
                           Lorem ipsum dolor sit amet, consectetur adipiscing
                           elit, sed do eiusmod tempor incididunt ut labore et
@@ -391,9 +329,9 @@
                     <div class="item animate" data-animate="fadeInUp">
                       <div class="service-box">
                         <span class="service-icon"
-                          ><i class="fa fa-bullhorn" aria-hidden="true"></i
+                          ><i class="fa fa-envelope" aria-hidden="true"></i
                         ></span>
-                        <h3>Marketing</h3>
+                        <h3>SMS Marketing</h3>
                         <p>
                           Lorem ipsum dolor sit amet, consectetur adipiscing
                           elit, sed do eiusmod tempor incididunt ut labore et
@@ -405,9 +343,9 @@
                     <div class="item animate" data-animate="fadeInUp">
                       <div class="service-box">
                         <span class="service-icon"
-                          ><i class="fa fa-camera" aria-hidden="true"></i
+                          ><i class="fa fa-envelope" aria-hidden="true"></i
                         ></span>
-                        <h3>Photography</h3>
+                        <h3>SMS Marketing</h3>
                         <p>
                           Lorem ipsum dolor sit amet, consectetur adipiscing
                           elit, sed do eiusmod tempor incididunt ut labore et
@@ -426,16 +364,14 @@
           <!--/.section-inner-->
         </div>
         <!--/.section-->
-        <div class="section animated-row" id="5">
+        <div class="section animated-row" id="4">
           <div class="section-inner">
             <div class="row justify-content-center">
               <div class="col-md-8 wide-col-laptop">
                 <div class="title-block animate" data-animate="fadeInUp">
                   <h2>Testimonials</h2>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
+                    Check out what our trusted clients say about our service
                   </p>
                 </div>
                 <!--/.title-block-->
@@ -453,11 +389,11 @@
                         <!--/.testimonial-content-->
                         <div class="client-row">
                           <figure class="client-img">
-                            <img src="images/client-01.jpg" alt="" />
+                            <img src="images/1.png" alt="" />
                           </figure>
                           <div class="client-info">
-                            <span class="client-name">Maria wilson</span>
-                            Creative Head, ACD fitness
+                            <span class="client-name">Kiran Karnan</span>
+                            Creative Head
                           </div>
                           <!--/.client-info-->
                         </div>
@@ -478,11 +414,11 @@
                         <!--/.testimonial-content-->
                         <div class="client-row">
                           <figure class="client-img">
-                            <img src="images/client-02.jpg" alt="" />
+                            <img src="images/2.png" alt="" />
                           </figure>
                           <div class="client-info">
-                            <span class="client-name">ELIZAH watson</span>
-                            Owner, ELIZAH photography
+                            <span class="client-name">Keerthy Karnan</span>
+                            HR
                           </div>
                           <!--/.client-info-->
                         </div>
@@ -503,11 +439,11 @@
                         <!--/.testimonial-content-->
                         <div class="client-row">
                           <figure class="client-img">
-                            <img src="images/client-03.jpg" alt="" />
+                            <img src="images/3.png" alt="" />
                           </figure>
                           <div class="client-info">
-                            <span class="client-name">Maria wilson</span>
-                            Creative Head, ACD fitness
+                            <span class="client-name">Thomas Thomas</span>
+                            Web Developer
                           </div>
                           <!--/.client-info-->
                         </div>
@@ -528,11 +464,11 @@
                         <!--/.testimonial-content-->
                         <div class="client-row">
                           <figure class="client-img">
-                            <img src="images/client-04.jpg" alt="" />
+                            <img src="images/4.png" alt="" />
                           </figure>
                           <div class="client-info">
-                            <span class="client-name">Maria wilson</span>
-                            Creative Head, ACD fitness
+                            <span class="client-name">Rohan T George</span>
+                            Web Designer
                           </div>
                           <!--/.client-info-->
                         </div>
@@ -553,36 +489,11 @@
                         <!--/.testimonial-content-->
                         <div class="client-row">
                           <figure class="client-img">
-                            <img src="images/client-05.jpg" alt="" />
+                            <img src="images/5.png" alt="" />
                           </figure>
                           <div class="client-info">
-                            <span class="client-name">ELIZAH watson</span>
-                            Owner, ELIZAH photography
-                          </div>
-                          <!--/.client-info-->
-                        </div>
-                        <!--/.client-row-->
-                      </div>
-                      <!--/.testimonial-item-->
-                    </div>
-                    <!--/.item-->
-                    <div class="item animate" data-animate="fadeInUp">
-                      <div class="testimonial-item">
-                        <div class="testimonial-content">
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua.
-                          </p>
-                        </div>
-                        <!--/.testimonial-content-->
-                        <div class="client-row">
-                          <figure class="client-img">
-                            <img src="images/client-06.jpg" alt="" />
-                          </figure>
-                          <div class="client-info">
-                            <span class="client-name">Maria wilson</span>
-                            Creative Head, ACD fitness
+                            <span class="client-name">Sidharth</span>
+                            Graphic Designer
                           </div>
                           <!--/.client-info-->
                         </div>
@@ -601,7 +512,7 @@
           <!--/.section-inner-->
         </div>
         <!--/.section-->
-        <div class="section animated-row" id="6">
+        <div class="section animated-row" id="5">
           <div class="section-inner">
             <div class="row justify-content-center">
               <div class="col-md-8 wide-col-laptop">
@@ -614,10 +525,23 @@
                     <div class="item animate" data-animate="fadeInUp">
                       <a href="project-details.html" class="gallery-box">
                         <figure class="gallery-img">
-                          <img src="images/gallery-01.jpg" alt="" />
+                          <img src="images/work-1.png" alt="" />
                         </figure>
                         <div class="gallery-overlay">
-                          <h4>ACD fitness point</h4>
+                          <h4>Bulk SMS</h4>
+                        </div>
+                        <!--/.gallery-overlay--> </a
+                      ><!--/.gallery-box-->
+                    </div>
+                    <!--/.item-->
+
+                    <div class="item animate" data-animate="fadeInUp">
+                      <a href="project-details.html" class="gallery-box">
+                        <figure class="gallery-img">
+                          <img src="images/work-3.png" alt="" />
+                        </figure>
+                        <div class="gallery-overlay">
+                          <h4>Bulk SMS</h4>
                         </div>
                         <!--/.gallery-overlay--> </a
                       ><!--/.gallery-box-->
@@ -626,58 +550,23 @@
                     <div class="item animate" data-animate="fadeInUp">
                       <a href="project-details.html" class="gallery-box">
                         <figure class="gallery-img">
-                          <img src="images/gallery-02.jpg" alt="" />
+                          <img src="images/work-1.png" alt="" />
                         </figure>
                         <div class="gallery-overlay">
-                          <h4>ELIZAH photography</h4>
+                          <h4>Bulk SMS</h4>
                         </div>
                         <!--/.gallery-overlay--> </a
                       ><!--/.gallery-box-->
                     </div>
                     <!--/.item-->
+
                     <div class="item animate" data-animate="fadeInUp">
                       <a href="project-details.html" class="gallery-box">
                         <figure class="gallery-img">
-                          <img src="images/gallery-03.jpg" alt="" />
+                          <img src="images/work-3.png" alt="" />
                         </figure>
                         <div class="gallery-overlay">
-                          <h4>abissy builders</h4>
-                        </div>
-                        <!--/.gallery-overlay--> </a
-                      ><!--/.gallery-box-->
-                    </div>
-                    <!--/.item-->
-                    <div class="item animate" data-animate="fadeInUp">
-                      <a href="project-details.html" class="gallery-box">
-                        <figure class="gallery-img">
-                          <img src="images/gallery-01.jpg" alt="" />
-                        </figure>
-                        <div class="gallery-overlay">
-                          <h4>ACD fitness point</h4>
-                        </div>
-                        <!--/.gallery-overlay--> </a
-                      ><!--/.gallery-box-->
-                    </div>
-                    <!--/.item-->
-                    <div class="item animate" data-animate="fadeInUp">
-                      <a href="project-details.html" class="gallery-box">
-                        <figure class="gallery-img">
-                          <img src="images/gallery-02.jpg" alt="" />
-                        </figure>
-                        <div class="gallery-overlay">
-                          <h4>ELIZAH photography</h4>
-                        </div>
-                        <!--/.gallery-overlay--> </a
-                      ><!--/.gallery-box-->
-                    </div>
-                    <!--/.item-->
-                    <div class="item animate" data-animate="fadeInUp">
-                      <a href="project-details.html" class="gallery-box">
-                        <figure class="gallery-img">
-                          <img src="images/gallery-03.jpg" alt="" />
-                        </figure>
-                        <div class="gallery-overlay">
-                          <h4>abissy builders</h4>
+                          <h4>Bulk SMS</h4>
                         </div>
                         <!--/.gallery-overlay--> </a
                       ><!--/.gallery-box-->
@@ -693,7 +582,7 @@
           <!--/.section-inner-->
         </div>
         <!--/.section-->
-        <div class="section animated-row" id="7">
+        <div class="section animated-row" id="6">
           <div class="section-inner">
             <div class="row justify-content-center">
               <div class="col-md-7 wide-col-laptop">
@@ -706,46 +595,56 @@
                   </p>
                 </div>
                 <!--/.title-block-->
+                <!--alert messages start-->
+                <?php echo $alert; ?>
+                <!--alert messages end-->
+
+                <!--contact section start-->
                 <div class="contact-section">
                   <div class="row">
                     <div class="col-md-6 animate" data-animate="fadeInUp">
-                      <form id="ajax-contact" method="post" action="mailer.php">
-                        <div class="input-field">
-                          <input
-                            type="text"
-                            class="form-control"
-                            name="name"
-                            id="name"
-                            required
-                            placeholder="Name"
-                          />
+                      <div class="contact-section">
+                        <div class="contact-form">
+                          <form class="contact" action="" method="post">
+                            <div class="input-field">
+                              <input
+                                type="text"
+                                name="name"
+                                class="form-control"
+                                placeholder="Name"
+                                required
+                              />
+                            </div>
+                            <div class="input-field">
+                              <input
+                                type="email"
+                                name="email"
+                                class="form-control"
+                                placeholder="Email"
+                                required
+                              />
+                            </div>
+                            <div class="input-field">
+                              <textarea
+                                name="message"
+                                class="form-control"
+                                rows="5"
+                                placeholder="Message"
+                                required
+                              ></textarea>
+                            </div>
+                            <input
+                              type="submit"
+                              name="submit"
+                              class="btn"
+                              value="Submit"
+                            />
+                          </form>
                         </div>
-                        <!--/.input-field-->
-                        <div class="input-field">
-                          <input
-                            type="email"
-                            class="form-control"
-                            name="email"
-                            id="email"
-                            required
-                            placeholder="Email"
-                          />
-                        </div>
-                        <!--/.input-field-->
-                        <div class="input-field">
-                          <textarea
-                            class="form-control"
-                            name="message"
-                            id="message"
-                            required
-                            placeholder="Message"
-                          ></textarea>
-                        </div>
-                        <!--/.input-field-->
-                        <button class="btn" type="submit">Submit</button>
-                      </form>
-                      <div id="form-messages" class="mt-3"></div>
+                      </div>
                     </div>
+
+                    <!--contact section end-->
                     <div class="col-md-6 animate" data-animate="fadeInUp">
                       <div class="contact-box">
                         <h4>Connect with us</h4>
@@ -760,11 +659,14 @@
                         <!--/.contact-row-->
                         <div class="contact-row">
                           <i class="fa fa-phone"></i
-                          ><a href="09207751152">+91 92077 51152</a>
+                          ><a href="tel:09207751152">+91 92077 51152</a>
                         </div>
                         <!--/.contact-row-->
                         <div class="contact-row">
-                          <i class="fa fa-envelope"></i>hello@companyname.com
+                          <i class="fa fa-envelope"></i
+                          ><a href="mailto:adyaconnect@gmail.com"
+                            >adyaconnect@gmail.com</a
+                          >
                         </div>
                         <!--/.contact-row-->
                       </div>
@@ -872,5 +774,12 @@
     <!-- Contact js -->
     <script src="js/general-scripts.js"></script>
     <!-- Main Script -->
+
+    <!-- integrating phpmailer -->
+    <script type="text/javascript">
+      if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+      }
+    </script>
   </body>
 </html>
