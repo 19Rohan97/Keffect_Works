@@ -39,6 +39,9 @@ a:hover {
   text-decoration: none;
 }
 
+hr{
+  background: #ff0000;
+}
 /************** Header Styling Start **************/
 /* Header-top */
 header .header-top a {
@@ -342,27 +345,40 @@ nav {
 }
 /************** Product Slider Styling End **************/
 
-
 /************** Login page Styling Start **************/
-#login-page{
+#login-page {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
 }
-@media screen and (min-width: 800px){
-  #login-page input{
+#login-page .btn{
+  width: 50%;
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 800px) {
+  #login-page input {
     width: 50%;
     height: 30px;
-    outline: 1px solid #ff000060;
+    outline: 1px solid #a8a8a860;
     border-radius: 0;
+    font-size: 1.3rem;
   }
-  #login-page section{
-    border: 1px solid red;
-    /* margin: 0 auto; */
+  #login-page section {
+    /* border: 1px solid red; */
+    margin: 0 auto;
+  }
+  #login-page h4 {
+    font-size: 2.5rem;
+  }
+  #login-page .login,
+  #login-page .register {
+    width: 100%;
+  }
+  #login-page label {
+    font-size: 1.6rem;
   }
 }
 /************** Login page Styling End **************/
-
 
 /************** Footer Styling Start **************/
 footer a {
