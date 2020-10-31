@@ -1,0 +1,2 @@
+Database name="user-verification"
+table name="users"
