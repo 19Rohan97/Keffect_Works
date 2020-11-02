@@ -2234,7 +2234,7 @@
           <div class="col-md-3 mx-auto mb-4">
             <h6 class="text-uppercase font-weight-bold">ASECOM</h6>
             <hr
-              class="bg-info mb-4 mt-0 d-inline-block mx-auto"
+              class="mb-4 mt-0 d-inline-block mx-auto"
               style="width: 85px; height: 2px"
             />
             <p class="mt-2">
@@ -2246,7 +2246,7 @@
           <div class="col-md-2 mx-auto mb-4">
             <h6 class="text-uppercase font-weight-bold">Products</h6>
             <hr
-              class="bg-info mb-4 mt-0 d-inline-block mx-auto"
+              class="mb-4 mt-0 d-inline-block mx-auto"
               style="width: 85px; height: 2px"
             />
             <ul class="list-unstyled">
@@ -2258,7 +2258,7 @@
           <div class="col-md-2 mx-auto mb-4">
             <h6 class="text-uppercase font-weight-bold">Links</h6>
             <hr
-              class="bg-info mb-4 mt-0 d-inline-block mx-auto"
+              class="mb-4 mt-0 d-inline-block mx-auto"
               style="width: 85px; height: 2px"
             />
             <ul class="list-unstyled">
@@ -2271,7 +2271,7 @@
           <div class="col-md-4 mx-auto mb-4">
             <h6 class="text-uppercase font-weight-bold">Contact Us</h6>
             <hr
-              class="bg-info mb-4 mt-0 d-inline-block mx-auto"
+              class="mb-4 mt-0 d-inline-block mx-auto"
               style="width: 85px; height: 2px"
             />
             <ul class="list-unstyled">
