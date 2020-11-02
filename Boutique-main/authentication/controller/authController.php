@@ -88,7 +88,7 @@ if(isset($_POST['signup-btn']))
 
 			$_SESSION['message']="You are now logged in";
 			$_SESSION['alert-class']="alert-success";
-			header('location: ../header2.php');
+			header('location: ../index.php');
 			exit();
 		}
 		else
@@ -143,7 +143,7 @@ if(isset($_POST['signup-btn']))
 
 			$_SESSION['message']="You are now logged in";
 			$_SESSION['alert-class']="alert-success";
-			header('location: ../header2.php');
+			header('location: ../index.php');
 			exit();
 		
 		}
