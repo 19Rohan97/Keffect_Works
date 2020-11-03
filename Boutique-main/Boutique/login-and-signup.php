@@ -1,10 +1,13 @@
-<!-- Page after logging in -->
+<?php
+require_once 'controllers/authController.php'
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Header</title>
+    <title>Login/Sign up</title>
 
     <!---------------- CSS Starthere ---------------->
     <!-- Google Fonts -->
@@ -28,11 +31,8 @@
     <!-- Slick carousel CSS -->
     <link rel="stylesheet" href="css/slick.css" />
 
-    <!-- Lightbox CSS -->
-    <link rel="stylesheet" href="css/lightbox.css" />
-
     <!-- Header CSS -->
-    <link rel="stylesheet" href="css/header3.css" />
+    <link rel="stylesheet" href="css/header2.css" />
     <!---------------- CSS End Here ---------------->
   </head>
   <body>
@@ -48,48 +48,7 @@
         </div>
         <div class="top-right">
           <a href="#"><i class="fas fa-heart"></i></a>
-
-          <div class="dropdown">
-            <button
-              class="btn btn-secondary dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              <i class="fas fa-user"></i>
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <div class="contain">
-                <form action="POST" id="form">
-                  <div class="form-group dropdown-item">
-                    <label for="email">Email</label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      name="login-email"
-                      id="login-email"
-                      placeholder="Your Email*"
-                      required
-                    />
-                  </div>
-                  <div class="form-group dropdown-item">
-                    <label for="password">Password</label>
-                    <input
-                      type="password"
-                      class="form-control"
-                      name="login-password"
-                      id="login-password"
-                      placeholder="Your Password*"
-                      required
-                    />
-                  </div>
-                  <button type="submit" class="btn btn-primary">Log In</button>
-                </form>
-              </div>
-            </div>
-          </div>
+          <a href="login-and-signup.php"><i class="fas fa-user"></i></a>
           <!-- <a href="#"><i class="fas fa-sign-out-alt"></i></a> -->
           <a href="#" class="ml-3"
             >MY CART <i class="fas fa-shopping-bag mx-2"></i>(0)</a
@@ -99,7 +58,7 @@
       <hr />
       <!-- Logo and others -->
       <div class="main-logo container d-none d-lg-block">
-        <a href="header2.php"><img src="images/logo.png" alt="" /></a>
+        <img src="images/logo.png" alt="" />
       </div>
       <!-- Navbar styling -->
       <nav class="navbar navbar-expand-lg navbar-light py-3">
@@ -2074,187 +2033,105 @@
     </header>
     <!---------------- Header Styling End ---------------->
 
-    <!---------------- Slider Styling Start ---------------->
-    <section>
-      <div
-        id="carouselExampleControls"
-        class="carousel slide"
-        data-ride="carousel"
-      >
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              class="d-block w-100"
-              src="images/slider-1.jpg"
-              alt="First slide"
-              style="object-fit: contain"
+    <!-- Main Content Start -->
+    <main id="login-page" class="container my-5">
+      <!--  -->
+      <section class="login">
+        <h4>Login</h4>
+
+        <form action="login.php" method="post">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="text"
+              name="username"
+              value="<?php echo $username; ?>"
+              class="form-control"
+              id="login-email"
+              placeholder="Your Email*"
+              required
             />
-            <div class="carousel-caption">
-              <h5>Heading</h5>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Praesentium, id?
-              </p>
-            </div>
           </div>
-          <div class="carousel-item">
-            <img
-              class="d-block w-100"
-              src="images/slider-2.jpg"
-              alt="Second slide"
-              style="object-fit: contain"
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              name="password"
+              id="login-password"
+              placeholder="Your Password*"
+              required
             />
-            <div class="carousel-caption">
-              <h5>Heading</h5>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Praesentium, id?
-              </p>
-            </div>
           </div>
-          <div class="carousel-item">
-            <img
-              class="d-block w-100"
-              src="images/slider-3.jpg"
-              alt="Third slide"
-              style="object-fit: contain"
+          <button type="submit" name="login-btn" class="btn">Sign In</button>
+        </form>
+      </section>
+      <!--  -->
+      <!--  -->
+      <!--  -->
+      <section class="register">
+        <h4>Create Account</h4>
+
+        <form action="signup.php" method="post">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              class="form-control"
+              name="username"
+              id="register-name"
+              placeholder="Your Full Name*"
+              required
             />
-            <div class="carousel-caption">
-              <h5>Heading</h5>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Praesentium, id?
-              </p>
-            </div>
           </div>
-        </div>
-        <a
-          class="carousel-control-prev"
-          href="#carouselExampleControls"
-          role="button"
-          data-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a
-          class="carousel-control-next"
-          href="#carouselExampleControls"
-          role="button"
-          data-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-    </section>
-    <!---------------- Slider Styling End ---------------->
-
-    <!---------------- Category Styling Start ---------------->
-    <section class="category container">
-      <div class="category-item">
-        <img src="images/category-1.jpg" alt="category" />
-        <a href="#"><div class="category-item-info">Read More</div></a>
-      </div>
-      <div class="category-item">
-        <img src="images/category-2.jpg" alt="category" />
-        <a href="#"><div class="category-item-info">Read More</div></a>
-      </div>
-      <div class="category-item">
-        <img src="images/category-3.jpg" alt="category" />
-        <a href="#"><div class="category-item-info">Read More</div></a>
-      </div>
-      <div class="category-item">
-        <img src="images/category-4.jpg" alt="category" />
-        <a href="#"><div class="category-item-info">Read More</div></a>
-      </div>
-      <div class="category-item">
-        <img src="images/category-5.jpg" alt="category" />
-        <a href="#"><div class="category-item-info">Read More</div></a>
-      </div>
-      <div class="category-item">
-        <img src="images/category-6.jpg" alt="category" />
-        <a href="#"><div class="category-item-info">Read More</div></a>
-      </div>
-    </section>
-    <!---------------- Category Styling End ---------------->
-
-    <!---------------- Product Slider Styling Start ---------------->
-    <div class="product-slider my-5">
-      <h1 class="slider-title text-center">Featured Products</h1>
-      <hr />
-      <i class="fas fa-chevron-left prev"></i>
-      <i class="fas fa-chevron-right next"></i>
-
-      <div class="product-wrapper">
-        <div class="product">
-          <img src="images/products/product-1.webp" alt="product" />
-          <div class="product-info">
-            <h4>Product Brand</h4>
-            <h5>Product Name</h5>
-            <p>Product Price</p>
-            <a href="#" class="btn">View Product</a>
+          <!-- <div class="form-group">
+            <label for="name">Phone Number</label>
+            <input
+              type="text"
+              class="form-control"
+              name="name"
+              id="name"
+              placeholder="Your Phone Number"
+            />
+          </div> -->
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              name="email"
+              id="register-email"
+              placeholder="Your Email*"
+              required
+            />
           </div>
-        </div>
-        <div class="product">
-          <img src="images/products/product-2.webp" alt="product" />
-          <div class="product-info">
-            <h4>Product Brand</h4>
-            <h5>Product Name</h5>
-            <p>Product Price</p>
-            <a href="#" class="btn">View Product</a>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              name="password"
+              id="register-password"
+              placeholder="Your Password*"
+              required
+            />
           </div>
-        </div>
-        <div class="product">
-          <img src="images/products/product-3.webp" alt="product" />
-          <div class="product-info">
-            <h4>Product Brand</h4>
-            <h5>Product Name</h5>
-            <p>Product Price</p>
-            <a href="#" class="btn">View Product</a>
+          <div class="form-group">
+            <label for="password">Confirm Password</label>
+            <input
+              type="password"
+              class="form-control"
+              name="passwordConf"
+              id="confirm-password"
+              placeholder="Confirm Password*"
+              required
+            />
           </div>
-        </div>
-        <div class="product">
-          <img src="images/products/product-4.webp" alt="product" />
-          <div class="product-info">
-            <h4>Product Brand</h4>
-            <h5>Product Name</h5>
-            <p>Product Price</p>
-            <a href="#" class="btn">View Product</a>
-          </div>
-        </div>
-        <div class="product">
-          <img src="images/products/product-5.webp" alt="product" />
-          <div class="product-info">
-            <h4>Product Brand</h4>
-            <h5>Product Name</h5>
-            <p>Product Price</p>
-            <a href="#" class="btn">View Product</a>
-          </div>
-        </div>
-        <div class="product">
-          <img src="images/products/product-6.webp" alt="product" />
-          <div class="product-info">
-            <h4>Product Brand</h4>
-            <h5>Product Name</h5>
-            <p>Product Price</p>
-            <a href="#" class="btn">View Product</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-1.11.0.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
-    ></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
-
-    <!---------------- Product Slider Styling End ---------------->
+          <button type="submit" name="signup-btn" class="btn">Create</button>
+        </form>
+      </section>
+    </main>
+    <!-- Main Content End -->
 
     <!---------------- Footer Styling Start ---------------->
     <footer class="page-footer bg-light">
@@ -2365,59 +2242,12 @@
         </p>
       </div>
     </footer>
-    <!---------------- Footer Styling Start ---------------->
+    <!---------------- Footer Styling End ---------------->
 
     <!---------------- Scripts Start ---------------->
     <script src="js/jquery-3.5.1.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/slick.min.js"></script>
-
-    <script src="js/lightbox.js"></script>
-
-    <!-- Slick Carousel JS -->
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $(".product-wrapper").slick({
-          slidesToShow: 3,
-          pagination: false,
-          infinite: true,
-          slidesToScroll: 1,
-          autoplay: true,
-          autoplaySpeed: 1000,
-          nextArrow: $(".next"),
-          prevArrow: $(".prev"),
-          responsive: [
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: true,
-              },
-            },
-            {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-              },
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-              },
-            },
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
-          ],
-        });
-      });
-    </script>
-
     <!---------------- Scripts End ---------------->
   </body>
 </html>

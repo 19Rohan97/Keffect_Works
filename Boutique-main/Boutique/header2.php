@@ -45,7 +45,7 @@
         </div>
         <div class="top-right">
           <a href="#"><i class="fas fa-heart"></i></a>
-          <a href="login.php"><i class="fas fa-user"></i></a>
+          <a href="login-and-signup.php"><i class="fas fa-user"></i></a>
           <!-- <a href="#"><i class="fas fa-sign-out-alt"></i></a> -->
           <a href="#" class="ml-3">MY CART <i class="fas fa-shopping-bag mx-2"></i>(0)</a>
         </div>

@@ -17,15 +17,15 @@ require_once 'controllers/authController.php'
                 <form action="signup.php" method="post">
                     <h3 class="text-center">Register</h3>
                     <!-- Checking if any fields are incorrect or missing -->
-                    <?php if(count($errors)>0): ?>
+                    <?php if (count($errors) > 0): ?>
 
                     <!-- Providing placeholder for showing errors -->
                     <div class="alert alert-danger">
-                    <?php foreach($errors as $error): ?>
+                    <?php foreach ($errors as $error): ?>
                         <li><?php echo $error; ?></li>
-                    <?php endforeach ?>
+                    <?php endforeach?>
                     </div>
-                    <?php endif; ?>
+                    <?php endif;?>
                     <!-- Placeholder ends -->
                     <div class="form-group">
                         <label for="username">Username</label>
